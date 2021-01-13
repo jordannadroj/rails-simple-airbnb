@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Airbnb</a>
+    <a class="navbar-link active" href="/flats/new">Add Flat</a>
+  </div>
+</nav>
+
+<div class="home">
+  <div class="heading">
+    <h2>All our Flats</h2>
+    <p>All <%= @flats.count %> flats</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+    <% @flats.each do |f| %>
+      <div class="col-sm p-0 m-2">
+          <div class="overview">
+            <p><%= f.name %></p>
+            <p><%= f.address %></p>
+            <p><i class="fa fa-user-friends"></i> <%= f.number_of_guests %> <i class="fas fa-euro-sign"></i> <%= f.price_per_night %></p>
+          </div>
+          <div class="card_links">
+            <%= link_to "More Info", flat_path(f) %>
+          </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+

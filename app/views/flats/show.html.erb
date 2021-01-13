@@ -1,0 +1,39 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Airbnb</a>
+    <a class="navbar-link active" href="/flats/new">Add Flat</a>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="cards">
+    <div class="card">
+      <h2><%= @flat.name %></h2>
+      <p><%= @flat.address %></p>
+    </div>
+    <div class="card">
+      <h4>A bit more about this flat...</h4>
+      <p><%= @flat.description %></p>
+    </div>
+    <div class="card">
+      <h4>Details</h4>
+      <p><i class="fa fa-user-friends"></i> <%= @flat.number_of_guests %> <i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %></p>
+    </div>
+  </div>
+
+  <div class="right-side">
+    <div class="booking">
+      <h4>Book this place!</h4>
+      <label for="start">From:</label>
+      <input type="date" id="start" name="trip-start"
+      <label for="start">To:</label>
+      <input type="date" id="start" name="trip-start"
+      <label for="book"></label>
+      <input type="submit" name="book">
+    </div>
+    <div class="share">
+      <p>Share</p>
+    </div>
+  </div>
+</div>

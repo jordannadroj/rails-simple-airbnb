@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+puts "Cleaning database..."
+Flat.destroy_all
+puts "Creating flats..."
+
+3.times do
+  # ! is used on create! becuase it returns false when validation fails and they don't actually perform any operations on
+  # the database
+  flat = Flat.create!(
+    name: Faker::FunnyName.name,
+    address: Faker::Address.street_address,
+    description: Faker::Lorem.paragraph,
+    price_per_night: Faker::Number.number(digits: 3),
+    number_of_guests: Faker::Number.number(digits: 1)
+    )
+  puts "Creating #{flat.name}"
+end
+
+puts "finished"
