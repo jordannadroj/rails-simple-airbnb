@@ -7,8 +7,34 @@
   box-shadow: 1px 1px 1px rgba(10, 10, 10, 0.3);
 }
 
+img {
+  width: 100%;
+}
+
+
+
+.pic_flat img {
+  height: 300px;
+  object-fit: none;
+}
+
+.card {
+  margin: 12px;
+}
+
 .overview {
   background-color: rgba(150, 150, 150, 0.2);
+  padding: 8px;
+}
+
+.booking {
+background-color: rgba(150, 150, 150, 0.5);
+  padding: 8px;
+  margin: 12px;
+}
+
+.share {
+  background-color: rgba(150, 150, 150, 0.5);
   padding: 8px;
 }
 

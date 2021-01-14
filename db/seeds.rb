@@ -19,7 +19,8 @@ puts "Creating flats..."
     address: Faker::Address.street_address,
     description: Faker::Lorem.paragraph,
     price_per_night: Faker::Number.number(digits: 3),
-    number_of_guests: Faker::Number.number(digits: 1)
+    number_of_guests: Faker::Number.number(digits: 1),
+    picture: "https://picsum.photos/300"
     )
   puts "Creating #{flat.name}"
 end

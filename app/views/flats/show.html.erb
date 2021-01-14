@@ -1,10 +1,20 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Airbnb</a>
+    <a class="navbar-brand" href="/flats">Airbnb</a>
+    <a class="navbar-link active" <%= link_to "Edit", edit_flat_path(@flat) %> </a>
     <a class="navbar-link active" href="/flats/new">Add Flat</a>
   </div>
 </nav>
 
+<div class="pic_flat">
+
+  <%= image_tag(@flat.picture) %>
+
+
+</div>
+
+<br>
+<br>
 
 <div class="container">
   <div class="cards">
